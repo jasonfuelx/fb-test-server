@@ -2,7 +2,7 @@ const http = require('http');
 
 const server = http.createServer( (req,res) => {
 	res.end('Hey it works');
-	console.log('new call');
+	console.log(req.headers);
 });
 
 server.on('clientError',(err,socket) => {
