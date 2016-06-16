@@ -1,0 +1,24 @@
+{
+  "name": "fb-test-server",
+  "version": "1.0.0",
+  "description": "test server for facebook urls",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jasonfuelx@github.com/jasonfuelx/fb-test-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonfuelx/fb-test-server/issues"
+  },
+  "homepage": "https://github.com/jasonfuelx/fb-test-server#readme"
+}
