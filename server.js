@@ -9,10 +9,8 @@ const server = http.createServer( (req,res) => {
 		if(err) throw err;
 		console.log('The data has been appended to the view-header-logs.json file');
 	})
-	res.statusCode = 200;
-	res.end('Hey it works');
-	console.log(typeof req.headers);
-
+	res.writeHead(200);
+	res.end('Everything Works');
 });
 
 server.on('clientError',(err,socket) => {
