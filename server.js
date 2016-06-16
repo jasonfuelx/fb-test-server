@@ -3,13 +3,15 @@ const fs = require('fs');
 
 const server = http.createServer( (req,res) => {
 
-	fs.appendFile('view-header-logs.json', req.headers, (err) => {
+	const requestHeader = JSON.stringify(req.headers);
+
+	fs.appendFile('view-header-logs.json', `${requestHeader}\n` , (err) => {
 		if(err) throw err;
 		console.log('The data has been appended to the view-header-logs.json file');
 	})
 	res.statusCode = 200;
 	res.end('Hey it works');
-	console.log(req.headers);
+	console.log(typeof req.headers);
 
 });
 
