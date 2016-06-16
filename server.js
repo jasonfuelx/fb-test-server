@@ -8,4 +8,6 @@ server.on('clientError',(err,socket) => {
 	socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
 });
 
-server.listen('80','dev.tr.fuelx.com');
+server.listen('80', () => {
+	console.log('hey we are connected')
+});
