@@ -9,8 +9,11 @@ const server = http.createServer( (req,res) => {
 		if(err) throw err;
 		console.log('The data has been appended to the view-header-logs.json file');
 	})
-	res.writeHead(200);
-	res.end('Everything Works');
+	res.writeHead(200,{'Content-Type' : 'image/gif', 'Content-Length': 42});
+	const imgBase64 = 'R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+	var imgBinary = new Buffer(imgBase64, 'base64');
+	console.log(imgBinary.length);
+	res.end(imgBinary, 'binary');
 });
 
 server.on('clientError',(err,socket) => {
